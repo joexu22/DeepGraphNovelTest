@@ -1,0 +1,10 @@
+# Local database files (binary — do not commit)
+data/postgres/
+data/neo4j/
+.env
+.DS_Store
+node_modules/
+.gitnexus/
+*.pyc
+__pycache__/
+.venv/

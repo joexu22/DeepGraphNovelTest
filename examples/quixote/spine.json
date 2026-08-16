@@ -1,0 +1,15 @@
+{
+  "workId": "don-quixote",
+  "title": "Don Quixote",
+  "author": "Miguel de Cervantes",
+  "part": 1,
+  "chapters": [
+    {
+      "id": "ch08",
+      "seq": 8,
+      "title": "Of the good fortune which the valiant Don Quixote had in the terrible and undreamed-of adventure of the windmills",
+      "file": "chapters/08-windmills.md",
+      "asCode": "as-code/ch08.ts"
+    }
+  ]
+}
