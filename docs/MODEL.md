@@ -17,6 +17,9 @@ Two overlays, one world.
 | `Group` | Crowd, order, house, faction | `id`, `name`, `kind` |
 | `Event` | Thick fact (battle, funeral, charge) | `id`, `name`, `kind` |
 | `LoadMeta` | Provenance of a load | `id`, `source`, `loadedAt` |
+| `Chapter` | A TextSpan on the chapter clock | `id`, `n` |
+| `Object` | A thing that matters (library, basin) | `id`, `name` |
+| `Fact` / `Belief` / `Reveal` / `Vision` | Time and knowledge layer | see [TIME_MODEL.md](TIME_MODEL.md) |
 
 Every loadable node also gets `source` (e.g. `quixote-ch08`) so a chapter can be wiped and reloaded.
 
@@ -40,7 +43,7 @@ Action
 - Direct verb edges: `ATTACKS`, `WARNS`, `KILLED`, `SAID_TO`, `RIDES`, …
 - Event-mediated: `AGENT_OF`, `VICTIM_OF`, `PARTICIPATED_IN`, `ATTENDED`, `STATED_IN`
 
-Epistemic / time (on the relationship or the Event)
+Epistemic / time (on the relationship or the Event; for chapter-by-chapter truth, knowledge, and belief, see [TIME_MODEL.md](TIME_MODEL.md))
 
 - `figurative`, `narratorDoubts`, `claimedBy`
 - `whenNote`, `order`, `fromSection`, `toSection`

@@ -5,11 +5,53 @@
   "part": 1,
   "chapters": [
     {
+      "id": "ch01",
+      "seq": 1,
+      "label": "the hidalgo reads himself into knighthood",
+      "graph": "graph/time_model.cypher"
+    },
+    {
+      "id": "ch02",
+      "seq": 2,
+      "label": "first sally; the inn",
+      "graph": "graph/time_model.cypher"
+    },
+    {
+      "id": "ch03",
+      "seq": 3,
+      "label": "the innkeeper dubs him",
+      "graph": "graph/time_model.cypher"
+    },
+    {
+      "id": "ch06",
+      "seq": 6,
+      "label": "the scrutiny of the library",
+      "graph": "graph/time_model.cypher"
+    },
+    {
+      "id": "ch07",
+      "seq": 7,
+      "label": "the walled-up room; Sancho signs on",
+      "graph": "graph/time_model.cypher"
+    },
+    {
       "id": "ch08",
       "seq": 8,
       "title": "Of the good fortune which the valiant Don Quixote had in the terrible and undreamed-of adventure of the windmills",
       "file": "chapters/08-windmills.md",
       "asCode": "as-code/ch08.ts"
+    },
+    {
+      "id": "ch21",
+      "seq": 21,
+      "label": "the helmet of Mambrino",
+      "graph": "graph/time_model.cypher"
+    },
+    {
+      "id": "ch25",
+      "seq": 25,
+      "label": "Sierra Morena; who Dulcinea is",
+      "graph": "graph/time_model.cypher"
     }
   ]
 }

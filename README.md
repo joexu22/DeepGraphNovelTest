@@ -38,6 +38,28 @@ MATCH path = (s:Person {id:'sancho'})-[*1..2]-(n)
 RETURN path LIMIT 40
 ```
 
+## Playhead: what is true, known, and believed as of chapter N
+
+```bash
+docker exec -i novelgraph-neo4j cypher-shell -u neo4j -p novelgraph \
+  < examples/quixote/graph/time_model.cypher
+
+pip install neo4j
+python3 scripts/playhead_context.py --pov quixote --chapter 21
+```
+
+```
+### Don Quixote believes (may be wrong; write them as believed)
+- The basin is the enchanted golden helmet of Mambrino
+- He is a lawfully dubbed knight-errant
+...
+### Don Quixote must NOT know or realize yet (reader-only)
+- The shining object on the rider’s head is a barber’s brass basin worn against the rain
+...
+```
+
+That output is a continuity context pack: hand it to a model before it writes the next scene, so the character keeps the right knowledge and the right delusions. Design: [docs/TIME_MODEL.md](docs/TIME_MODEL.md).
+
 Postgres is there for tabular facts later (cast sheets, section offsets). Graph-shaped questions stay in Neo4j.
 
 Dev-only passwords live in `.env.example`. Do not reuse them on a network.
@@ -54,7 +76,7 @@ This public repo only carries public-domain examples. The *shapes* are what tran
 ## Next work (in likely order)
 
 - [ ] Extractor: paragraph → `(agent, verb, patient)` → Cypher, name-list + verb lexicon first
-- [ ] Section spine + `fromSection` / `toSection` playhead (do not mutate one edge forever)
+- [x] Chapter playhead: facts, beliefs, reveals, and visions on three clocks; see [docs/TIME_MODEL.md](docs/TIME_MODEL.md)
 - [ ] Point a code-graph CLI at `examples/quixote/as-code/` and see `impact DonQuixote`
 - [ ] Dual-write a few facts into Postgres for comparison
 - [ ] Tiny reader: chapter slider → filtered subgraph
